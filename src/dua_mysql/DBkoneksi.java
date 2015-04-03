@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dua_mysql;
 
 import java.sql.Connection;
@@ -18,31 +13,24 @@ public class DBkoneksi {
     
     public Connection konek(){
         try{
+            //untuk koneksi ke database
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("berhasil load driver MYSQL");
+            String url="jdbc:mysql://localhost:3306/skripsi";
+            con = DriverManager.getConnection(url,"root","");
             
+            //debug koneksi
+            System.out.println("berhasil load driver MYSQL");     
+            System.out.println("Berhasil koneksi");
+            //JOptionPane.showMessageDialog(null,"Horeee.... Mysql sudah terkoneksi");
         
         }
         catch(ClassNotFoundException e){
             System.out.println("gagal : "+e.getMessage());
         }
-        
-        //untuk koneksi ke database
-        try{
-            String url="jdbc:mysql://localhost:3306/skripsi";
-            con = DriverManager.getConnection(url,"root","");
-            System.out.println("Berhasil koneksi");
-                    
-        }
         catch(SQLException e){
             System.out.println("Gagal koneksi : "+e.getMessage());
             //JOptionPane.showMessageDialog(null,”Gagal koneksi…MySQL server belum aktif”);
-        }
-        
-        
+        }        
         return con;
-    
     }
-    
-    
 }

@@ -19,6 +19,7 @@ public class Dua_mysql {
     public static void main(String[] args) {
         // TODO code application logic here
         Connection koneksi = new DBkoneksi().konek();
+        Frame1 fr   = new Frame1();
     }
     
 }
