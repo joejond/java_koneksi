@@ -91,4 +91,8 @@ public class Frame1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Tombol_slmtDatang;
     // End of variables declaration//GEN-END:variables
+
+    void setvisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
